@@ -17,7 +17,7 @@ export default function Page() {
             <div className="flex flex-col gap-[24px]">
                 <div
                     className="ml-[32px] w-[326px] h-[100px] flex justify-center gap-3 items-center bg-[#1A1D1F] rounded-lg border-[#232627] border-[2px]">
-                    <Image src="/Vector1.svg" alt="eduIcon" className="object-cover w-[70px] h-[44px]" width={70} height={44}/>
+                    <Image src="/VectorCourse.svg" alt="eduIcon" className="object-cover w-[70px] h-[44px]" width={70} height={44}/>
                     <h1 className="w-[121px] h-[42px] text-[32px] font-bold mb-[12px]">Kurslar</h1>
                 </div>
                 <CourseFilters/>

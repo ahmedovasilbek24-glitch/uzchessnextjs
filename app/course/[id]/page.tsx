@@ -8,7 +8,7 @@ import CourseAccordion from "@/app/course/components/Acardion";
 import Anons from "@/app/command/Anons";
 import axios from "axios";
 import {useParams} from "next/navigation";
-import CourseComments from "@/app/news/components/CourseIzoh";
+import CourseComments from "@/app/command/CourseComment";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8888";
 
@@ -94,7 +94,7 @@ export default function Page() {
                                 {course.title}
                             </h1>
                             <div className="flex gap-3 items-center text-white">
-                                <Image src="/cash-outline 1.svg" alt="narx" width={24} height={24}/>
+                                <Image src="/pul.svg" alt="narx" width={24} height={24}/>
                                 <h3 className="text-[20px] font-bold">
                                     {newPrice > 0 ? newPrice.toLocaleString() : price.toLocaleString()} uzs
                                 </h3>
@@ -112,11 +112,11 @@ export default function Page() {
                                 {/*<p className="font-normal text-[14px]">{course.difficulty?.title || "—"}</p>*/}
                             </div>
                             <div className="flex gap-[8px] items-center">
-                                <Image src="/section.svg" alt="bo'lim" width={18} height={18}/>
+                                <Image src="/bolim.svg" alt="bo'lim" width={18} height={18}/>
                                 <p className="font-normal text-[14px]">{course.sectionsCount} ta bo'lim</p>
                             </div>
                             <div className="flex gap-[8px] items-center">
-                                <Image src="/vidioIcon.svg" alt="dars" width={13} height={17}/>
+                                <Image src="/video.svg" alt="dars" width={13} height={17}/>
                                 <p className="font-normal text-[14px]">{course.lessonsCount} ta dars</p>
                             </div>
                         </div>

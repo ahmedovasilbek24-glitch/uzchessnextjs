@@ -35,7 +35,7 @@ export default function CourseItem2({search}: { search: string }) {
     };
 
     return <div className="w-full">
-        {course.length > 0 ? (
+        {course?.length > 0 ? (
             course.slice(0, shown).map((item) => <CourseItem
                 key={item.id}
                 id={item.id}
@@ -52,12 +52,11 @@ export default function CourseItem2({search}: { search: string }) {
             />)) : (
             <div
                 className="flex flex-col items-center justify-center py-16 bg-[#202020] border border-[#1F272A] rounded-[12px]">
-                <Image src="/notfoundcourse.svg" alt="" className="w-[200px] h-[180px] mb-4" width={200} height={180}/>
-                <p className="text-[#F7F9FA] font-poppins text-[16px] font-medium">Hech qanday ma'lumot topilmadi</p>
+                <Image src="/NotFound.svg" alt="" className="w-[200px] h-[180px] mb-4" width={200} height={180}/>
             </div>
         )
         }
-        {shown < course.length && (
+        {shown < (course?.length || 0) && (
             <button
                 onClick={loadMore}
                 className="ml-[280px] w-[131px] h-[40px] mt-[20px] bg-[#1A1D1F] rounded-[8px] text-white"
